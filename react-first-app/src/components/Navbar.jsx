@@ -17,6 +17,7 @@ const Navbar = () => {
           <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link>
           <Nav.Link as={NavLink} to="/form">Form</Nav.Link>
           <Nav.Link as={NavLink} to="/switch/1">Switch Case</Nav.Link>
+          <Nav.Link as={NavLink} to="/searchparams">Search Params</Nav.Link>
         </Nav>
       </Container>
     </BootstrapNavbar>

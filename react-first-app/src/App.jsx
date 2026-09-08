@@ -9,6 +9,7 @@ import { SimpleForm } from './components/SimpleForm'
 import Error from './components/Error'
 import Navbar from './components/Navbar'
 import SwitchCase  from './components/SwitchCase'
+import SearchParamsExample from './components/SearchParamsExample'
 import "./App.css";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/form" element={<SimpleForm />} />
         <Route path="/switch/:pid" element={<SwitchCase />} />
+        <Route path="/searchparams" element={<SearchParamsExample />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>
