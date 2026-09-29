@@ -1,19 +1,19 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import A from './useContextEx/A'
+export const context = React.createContext();
+
 
 const Home = () => {
+  const [data, setData] = React.useState("Hello from Home");
   return (
     <Container className="text-center py-5">
-      <h1 className="display-4 mb-4">Welcome to React Learning</h1>
-      <p className="lead mb-4">
-        This is a practice project to learn React concepts including routing, 
-        state management, props, and component composition.
-      </p>
-      <p className="text-muted">
-        Use the navigation bar above to explore different components and features.
-      </p>
+      <context.Provider value={{ data, setData }}>
+        <h1>Home</h1>
+        <A />
+      </context.Provider>
     </Container>
   )
 }
 
-export default Home
+export default Home;

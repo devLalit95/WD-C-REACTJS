@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="justify-content: center; background-color: brown; height: auto">
+      <h1
+        style="
+          color: rgb(5, 101, 149);
+          font-size: 30px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          font-family: Roboto, sans-serif;
+          padding: 10px;
+        "
+      >
+        Todo List
+      </h1>
+    </div>
+    <div>
+      <input type="text" id="task-input" placeholder="Enter your task" />
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="deleteTask()">Delete Task</button>
+      <div id="task-container"></div>
+    </div>
+
+    <script>
+      function addTask() {
+        const taskInput = document.getElementById("task-input");
+        const taskContainer = document.getElementById("task-container");
+
+        if (taskInput.value.trim() !== "") {
+          const taskItem = document.createElement("div");
+          taskItem.textContent = taskInput.value;
+          taskContainer.appendChild(taskItem);
+          taskInput.value = "00";
+        }
+      }
+
+      function deleteTask() {
+        const taskContainer = document.getElementById("task-container");
+        const lastTask = taskContainer.lastChild;
+        if (lastTask) {
+          taskContainer.removeChild(lastTask);
+        }
+      }
+    </script>
+  </body>
+</html>
